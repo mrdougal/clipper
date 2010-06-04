@@ -1,0 +1,4 @@
+# Ignore file for XCode project
+
+build/Debug
+*.build
