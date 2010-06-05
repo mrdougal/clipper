@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		877E299911B8D3BC00B95F7E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877E299811B8D3BC00B95F7E /* AppKit.framework */; };
 		878AA13311B7B80B0067E14C /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878AA13211B7B80B0067E14C /* QuickLook.framework */; };
-		8DD76F9A0486AA7600D96B5E /* thumbnailer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* thumbnailer.m */; settings = {ATTRIBUTES = (); }; };
+		8DD76F9A0486AA7600D96B5E /* clipper.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* clipper.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* thumbnailer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* thumbnailer.1 */; };
 /* End PBXBuildFile section */
@@ -28,7 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08FB7796FE84155DC02AAC07 /* thumbnailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thumbnailer.m; sourceTree = "<group>"; };
+		08FB7796FE84155DC02AAC07 /* clipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = clipper.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* clipper_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clipper_Prefix.pch; sourceTree = "<group>"; };
 		877E299811B8D3BC00B95F7E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -66,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				32A70AAB03705E1F00C91783 /* clipper_Prefix.pch */,
-				08FB7796FE84155DC02AAC07 /* thumbnailer.m */,
+				08FB7796FE84155DC02AAC07 /* clipper.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -143,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD76F9A0486AA7600D96B5E /* thumbnailer.m in Sources */,
+				8DD76F9A0486AA7600D96B5E /* clipper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
