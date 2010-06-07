@@ -17,10 +17,8 @@ This is my first ever C application and it's currently "a bit rough"
 
 h2. TODO
 
-Accept arguments for 
-* input files
-* output files
-* dimension of thumbnail
+Make the parsing of arguments smarter. At the moment it assumes that the first argument will always be the path to the file. 
+Passing in -h (for help) means clipper will attempt to create thumbnails of a file '-h' 
 
 Dougal MacPherson 
 hello@newfangled.com.au
