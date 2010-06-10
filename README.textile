@@ -19,23 +19,19 @@ h2. TODO
 
 Make the parsing of arguments smarter. At the moment it assumes that the first argument will always be the path to the file. 
 Passing in -h (for help) means clipper will attempt to create thumbnails of a file '-h' 
+Dimensions of the output file is currently hard coded.
 
 
 h2. Gottachs with Quicklook
 
 If the file has no extension Quicklook has no idea what to do with it. 
-Files uploads are stored as tempfiles, which means a couple of things.
-* File names are changed to a random string
-* File extensions _by default_ are stripped
-** We have worked around this, by recreating the tempfile with the extension.
 
 h2. Things to note
 
-Quicklook won't create an image larger than the original. Which is nice.
+Quicklook won't create an image larger than the original. When previewing iWork documents, quicklook will return the thumbnail stored inside the document (package) at /QuickLook/Thumbnail.jpg
+* In Pages the dimension of this image is 361x512 pixels.
+* In Numbers the dimension of this image 310x219 pixels.
 
-iWork oddities quicklook will return the thumbnail stored inside the document at /QuickLook/Thumbnail.jpg
-* Pages documents will return  which is saved at 361x512 pixels.
-* Numbers documents have a limit of 310x219 pixels
 
 
 Dougal MacPherson 
