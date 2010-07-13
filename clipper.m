@@ -50,7 +50,7 @@ int main (int argc, const char * argv[]) {
 	NSFileManager		*fm; 
 	NSString			*inFileName, *outFileName;
 	NSFileHandle		*outFile;
-	Float64				*thumbSize;
+	CGFloat				thumbSize;
 
 	// For looking up arguments supplied to the application
 	NSProcessInfo		*proc = [NSProcessInfo processInfo];
@@ -58,7 +58,7 @@ int main (int argc, const char * argv[]) {
 	
 	// Quicklook stuff
 	NSURL				*inFileURL;
-	CGImageRef			*qlThumb;
+	CGImageRef			qlThumb;
 	NSBitmapImageRep	*qlBitmapRep;
 	NSData				*qlBlob;
 
@@ -79,11 +79,11 @@ int main (int argc, const char * argv[]) {
 	outFileName = [ inFileName stringByAppendingString:@".png" ];
 	
 //	thumbStyle = @"thumb";
-//	thumbSize = (CGFloat) 800;
+	thumbSize = (CGFloat) 800;
 	
 	for (int i = 2; i < argc; ++i) {
 		if (!strcmp ("-s", argv[i])) {
-			//thumbSize = (Float64) [[ args objectAtIndex: ++i] floatValue];
+			thumbSize = [[ args objectAtIndex: ++i] floatValue];
 		}
 		else if (!strcmp("-o", argv[i])) {
 			outFileName = [args objectAtIndex: ++i];
@@ -110,7 +110,7 @@ int main (int argc, const char * argv[]) {
 	
 	inFileURL = [ NSURL fileURLWithPath: inFileName];	// Build url to file
 
-	qlThumb = QLThumbnailImageCreate(nil, (CFURLRef)inFileURL, CGSizeMake(120,120), nil);	// Ask Quicklook for a representation of the file	
+	qlThumb = QLThumbnailImageCreate(nil, (CFURLRef)inFileURL, CGSizeMake(thumbSize,thumbSize), nil);	// Ask Quicklook for a representation of the file	
 
 
 	if (qlThumb != nil) {
