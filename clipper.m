@@ -87,15 +87,31 @@ int main (int argc, const char * argv[]) {
 	
 	for (int i = 2; i < argc; ++i) {
 		if (!strcmp ("-s", argv[i])) {
+			
+			// Set the size of the thumb from the supplied arguments
 			thumbSize = [[ args objectAtIndex: ++i] floatValue];
 		}
-		else if (!strcmp("-o", argv[i])) {
+		else if (!strcmp ("-o", argv[i])) {
+			
+			// Set the *name* of the output file
+			// Note that this isn't the handle to the file, we still need to create that
+			// outFileName = [[args objectAtIndex: ++i] initWithCString:NSUTF8StringEncoding];
+			
+//			outFileName = [[args objectAtIndex: ++i]];
 			outFileName = [args objectAtIndex: ++i];
+						   
+			
+			//NSLog(@"outFileName = %s", [[ args objectAtIndex: ++i] UTF8String ]);
+			
 		}
 		else if (!strcmp ("-h", argv[i])) {
+			
+			// Display the usage information
 			usageString(result);
 		}
 		else {
+			
+			// NFI what they wanted, so we'll give them the usage information
 			NSLog(@"Unknown command %s", [args objectAtIndex: i]);
 			usageString(result);
 		}
@@ -108,7 +124,6 @@ int main (int argc, const char * argv[]) {
 	if ([ fm isReadableFileAtPath: inFileName] == NO) {
 		
 		NSLog(@"Can't read file %@", inFileName);
-		//printf("Can't read file %s", inFileName);
 		usageString(result);
 	}
 	
