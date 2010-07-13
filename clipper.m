@@ -78,7 +78,11 @@ int main (int argc, const char * argv[]) {
 	inFileName = [args objectAtIndex: 1];
 	outFileName = [ inFileName stringByAppendingString:@".png" ];
 	
-//	thumbStyle = @"thumb";
+	
+	//	The size of the image to produce. Default is 800
+	// Please be aware that not all files will return an image that large.
+	// eg: iWork documents will only return an image around 400 pixles, and quicklook just returns the image
+	// contained in the document.
 	thumbSize = (CGFloat) 800;
 	
 	for (int i = 2; i < argc; ++i) {
